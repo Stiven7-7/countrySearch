@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AboutPageComponent } from './pages/about-pages/about-page.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { RouterModule } from '@angular/router';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 
 
@@ -9,14 +12,19 @@ import { AboutPageComponent } from './pages/about-pages/about-page.component';
 @NgModule({
   declarations: [
     AboutPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    SidebarComponent,
+    ContactPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports:[
     AboutPageComponent,
-    HomePageComponent
+    ContactPageComponent,
+    HomePageComponent,
+    SidebarComponent
   ]
 })
 export class SharedModule { }
